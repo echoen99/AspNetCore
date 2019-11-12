@@ -14,7 +14,6 @@ namespace DutchTreat.ViewModels
     [Required]
     [MinLength(4)]
     public string OrderNumber { get; set; }
-
-
+    
   }
 }
