@@ -11,41 +11,42 @@ using Microsoft.Extensions.Logging;
 
 namespace DutchTreat
 {
-    public class Program
+  public class Program
+  {
+
+    public static void Main(string[] args)
     {
-        public static void Main(string[] args)
-        {
-            var host = CreateHostBuilder(args).Build();
-                
-            SeedDb(host);
+      var host = CreateHostBuilder(args).Build();
 
-            host.Run();
-        }
+      SeedDb(host);
 
-        private static void SeedDb(IHost host)
-        {
-            var scopeFactory = host.Services.GetService<IServiceScopeFactory>();
-            using var scope = scopeFactory.CreateScope();
-            var seeder = scope.ServiceProvider.GetService<DutchSeeder>();
-            seeder.Seed();
-        }
-
-        public static IHostBuilder CreateHostBuilder(string[] args) =>
-            Host.CreateDefaultBuilder(args)
-            .ConfigureAppConfiguration(SetupConfiguration)
-                .ConfigureWebHostDefaults(webBuilder =>
-                {
-                    webBuilder.UseStartup<Startup>();
-                });
-
-        private static void SetupConfiguration(HostBuilderContext ctx, IConfigurationBuilder builder)
-        {
-            // remove the default configuration options.
-            builder.Sources.Clear();
-
-            builder.AddJsonFile("config.json", false, true)
-                   .AddEnvironmentVariables();
-
-        }
+      host.Run();
     }
+
+    private static void SeedDb(IHost host)
+    {
+      var scopeFactory = host.Services.GetService<IServiceScopeFactory>();
+      using var scope = scopeFactory.CreateScope();
+      var seeder = scope.ServiceProvider.GetService<DutchSeeder>();
+      seeder.Seed();
+    }
+
+    public static IHostBuilder CreateHostBuilder(string[] args) =>
+        Host.CreateDefaultBuilder(args)
+        .ConfigureAppConfiguration(SetupConfiguration)
+            .ConfigureWebHostDefaults(webBuilder =>
+            {
+              webBuilder.UseStartup<Startup>();
+            });
+
+    private static void SetupConfiguration(HostBuilderContext ctx, IConfigurationBuilder builder)
+    {
+      // remove the default configuration options.
+      builder.Sources.Clear();
+
+      builder.AddJsonFile("config.json", false, true)
+             .AddEnvironmentVariables();
+
+    }
+  }
 }
