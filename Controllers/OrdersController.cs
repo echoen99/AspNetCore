@@ -2,6 +2,8 @@
 using DutchTreat.Data;
 using DutchTreat.Data.Entities;
 using DutchTreat.ViewModels;
+using Microsoft.AspNetCore.Authentication.JwtBearer;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Logging;
 using System;
@@ -13,6 +15,7 @@ using System.Threading.Tasks;
 namespace DutchTreat.Controllers
 {
   [Route("api/[Controller]")]
+  [Authorize(AuthenticationSchemes = JwtBearerDefaults.AuthenticationScheme)]
   public class OrdersController : ControllerBase
   {
     private readonly IDutchRepository _repository;
@@ -51,7 +54,7 @@ namespace DutchTreat.Controllers
       {
 
         var order = _repository.GetOrderById(id);
-        if (order != null) return Ok(_mapper.Map<Order,OrderViewModel>(order));
+        if (order != null) return Ok(_mapper.Map<Order, OrderViewModel>(order));
         else return NotFound();
       }
       catch (Exception ex)
@@ -71,7 +74,7 @@ namespace DutchTreat.Controllers
         if (ModelState.IsValid)
         {
 
-          var newOrder = _mapper.Map<OrderViewModel,Order>(model);
+          var newOrder = _mapper.Map<OrderViewModel, Order>(model);
 
           if (newOrder.OrderDate == DateTime.MinValue)
           {
@@ -81,7 +84,7 @@ namespace DutchTreat.Controllers
           _repository.AddEntity(newOrder);
           if (_repository.SaveAll())
           {
-            return Created($"/api/orders/{newOrder.Id}", _mapper.Map<Order,OrderViewModel>(newOrder));
+            return Created($"/api/orders/{newOrder.Id}", _mapper.Map<Order, OrderViewModel>(newOrder));
           }
         }
         else
