@@ -1,20 +1,15 @@
 ﻿@model IEnumerable<Product>
 @section Scripts {
-
-    <script src="~/clientapp/dist/runtime-es5.js"></script>
-    <script src="~/clientapp/dist/runtime-es2015.js"></script>
-
-    <script src="~/clientapp/dist/polyfills-es5.js"></script>
-    <script src="~/clientapp/dist/polyfills-es2015.js"></script>
-
-    <script src="~/clientapp/dist/styles-es5.js"></script>
-    <script src="~/clientapp/dist/styles-es2015.js"></script>
-
-    <script src="~/clientapp/dist/vendor-es5.js"></script>
-    <script src="~/clientapp/dist/vendor-es2015.js"></script>
-
-    <script src="~/clientapp/dist/main-es5.js"></script>
-    <script src="~/clientapp/dist/main-es2015.js"></script>
+    <script src="~/ClientApp/dist/runtime-es2015.js" type="module"></script>
+    <script src="~/ClientApp/dist/runtime-es5.js" nomodule defer></script>
+    <script src="~/ClientApp/dist/polyfills-es5.js" nomodule defer></script>
+    <script src="~/ClientApp/dist/polyfills-es2015.js" type="module"></script>
+    <script src="~/ClientApp/dist/styles-es2015.js" type="module"></script>
+    <script src="~/ClientApp/dist/styles-es5.js" nomodule defer></script>
+    <script src="~/ClientApp/dist/vendor-es2015.js" type="module"></script>
+    <script src="~/ClientApp/dist/vendor-es5.js" nomodule defer></script>
+    <script src="~/ClientApp/dist/main-es2015.js" type="module"></script>
+    <script src="~/ClientApp/dist/main-es5.js" nomodule defer></script>
 }
 <h1>Shop</h1>
-<my_app></my_app>
+<the-shop>Loading1...</the-shop>

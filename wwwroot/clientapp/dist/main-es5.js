@@ -33,14 +33,14 @@
             /* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm2015/core.js");
             var AppComponent = /** @class */ (function () {
                 function AppComponent() {
-                    this.title = 'Dutch Treat';
+                    this.title = 'Dutch Treat1';
                 }
                 return AppComponent;
             }());
             AppComponent = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
                 Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Component"])({
                     selector: 'the-shop',
-                    template: "\n    <!--The content below is only a placeholder and can be replaced.-->\n    <div style=\"text-align:center\" class=\"content\">\n      <h1>\n        Welcome to {{title}}!\n      </h1>\n      <span style=\"display: block\">{{ title }} app is running!</span>\n    </div>\n  "
+                    template: "\n      <h1>\n        Welcome to {{title}}!\n      </h1>\n  "
                 })
             ], AppComponent);
             /***/ 

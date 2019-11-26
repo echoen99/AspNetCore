@@ -40,10 +40,6 @@
 
   <ItemGroup>
     <TypeScriptCompile Remove="wwwroot\ts\main.ts" />
-  </ItemGroup>
-
-  <ItemGroup>
-    <Folder Include="ClientApp\" />
   </ItemGroup>  
   
 </Project>

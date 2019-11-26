@@ -1,7 +1,7 @@
 {
   "extends": "./tsconfig.json",
   "compilerOptions": {
-    "outDir": "./wwwroot/clientapp/out-tsc/app",
+    "outDir": "./wwwroot/clientapp/dist/out-tsc",
     "types": []
   },
   "files": [
