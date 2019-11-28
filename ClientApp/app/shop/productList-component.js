@@ -2,6 +2,9 @@ import { __decorate } from "tslib";
 import { Component } from "@angular/core";
 let ProductList = class ProductList {
     constructor() {
+        //constructor(private data: DataService) {
+        //  this.products = data.products;
+        //}
         this.products = [{
                 title: "First Product",
                 price: 19.99
