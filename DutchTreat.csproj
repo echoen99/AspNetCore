@@ -39,7 +39,17 @@
   </ItemGroup>
 
   <ItemGroup>
+    <None Remove="dutch-app.7z" />
+    <None Remove="DutchTreat.7z" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <TypeScriptCompile Remove="ClientApp\app\shop\productList-component.ts" />
     <TypeScriptCompile Remove="wwwroot\ts\main.ts" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="wwwroot\ClientApp\" />
   </ItemGroup>  
   
 </Project>
