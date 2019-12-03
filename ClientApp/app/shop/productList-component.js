@@ -1,24 +1,28 @@
 import { __decorate } from "tslib";
 import { Component } from "@angular/core";
 let ProductList = class ProductList {
-    constructor() {
-        this.products = [{
-                title: "First Product",
-                price: 19.99
-            }, {
-                title: "Second Product",
-                price: 9.99
-            }, {
-                title: "Third Product",
-                price: 14.99
-            }];
+    constructor(data) {
+        this.data = data;
+        this.products = [];
+        this.products = data.products;
+    }
+    ngOnInit() {
+        this.data.loadProducts()
+            .subscribe(success => {
+            if (success) {
+                this.products = this.data.products;
+            }
+        });
+    }
+    addProduct(product) {
+        this.data.addToOrder(product);
     }
 };
 ProductList = __decorate([
     Component({
         selector: "product-list",
         templateUrl: "productList.component.html",
-        styleUrls: []
+        styleUrls: ["productList.component.css"]
     })
 ], ProductList);
 export { ProductList };
