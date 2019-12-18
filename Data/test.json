@@ -1,0 +1,192 @@
+{
+  "Type": "Initiate",
+  "Settings": {
+    "Mode": "live",
+    "Reference": "888.com NJ",
+    "Locale": "en_US",
+    "Venue": "online",
+    "SimulationType": ""
+  },
+  "Persons": [
+    {
+      "Name": {
+        "FirstName": "pamela",
+        "LastName": "allen"
+      },
+      "Addresses": [
+        {
+          "StreetAddress1": "986 LEGER FORK RD",
+          "StreetAddress2": "",
+          "City": "Tyner",
+          "State": "KY",
+          "Zip5": "40486",
+          "Country": "US",
+          "Context": "primary"
+        }
+      ],
+      "SSN": {
+        "Number": "***",
+        "Type": "ssn9"
+      },
+      "DateOfBirth": {
+        "Year": "1982",
+        "Month": "10",
+        "Day": "21"
+      },
+      "Context": "primary"
+    }
+  ]
+} 
+{
+  "Status": {
+    "ConversationId": "31002755985751",
+    "RequestId": "4234057231",
+    "TransactionStatus": "passed",
+    "Reference": "888.com NJ"
+  },
+  "Products": [
+    {
+      "ProductType": "InstantID",
+      "ExecutedStepName": "Execute InstantID ",
+      "ProductConfigurationName": "execute_iid_caesars",
+      "ProductStatus": "pass",
+      "ParameterDetails": [
+        {
+          "Group": "INSTANT_ID",
+          "Name": "LexID",
+          "Values": [ { "Value": "38479780" } ]
+        },
+        {
+          "Group": "VERIFIED_INPUTS",
+          "Name": "VerifiedInput_FirstName",
+          "Values": [ { "Value": "PAMELA" } ]
+        },
+        {
+          "Group": "VERIFIED_INPUTS",
+          "Name": "VerifiedInput_LastName",
+          "Values": [ { "Value": "ALLEN" } ]
+        },
+        {
+          "Group": "VERIFIED_INPUTS",
+          "Name": "VerifiedInput_StreetNumber",
+          "Values": [ { "Value": "986" } ]
+        },
+        {
+          "Group": "VERIFIED_INPUTS",
+          "Name": "VerifiedInput_StreetName",
+          "Values": [ { "Value": "LEGER FORK" } ]
+        },
+        {
+          "Group": "VERIFIED_INPUTS",
+          "Name": "VerifiedInput_StreetSuffix",
+          "Values": [ { "Value": "RD" } ]
+        },
+        {
+          "Group": "VERIFIED_INPUTS",
+          "Name": "VerifiedInput_StreetAddress1",
+          "Values": [ { "Value": "986 LEGER FORK RD" } ]
+        },
+        {
+          "Group": "VERIFIED_INPUTS",
+          "Name": "VerifiedInput_City",
+          "Values": [ { "Value": "TYNER" } ]
+        },
+        {
+          "Group": "VERIFIED_INPUTS",
+          "Name": "VerifiedInput_State",
+          "Values": [ { "Value": "KY" } ]
+        },
+        {
+          "Group": "VERIFIED_INPUTS",
+          "Name": "VerifiedInput_Zip5",
+          "Values": [ { "Value": "40486" } ]
+        },
+        {
+          "Group": "VERIFIED_INPUTS",
+          "Name": "VerifiedInput_Zip4",
+          "Values": [ { "Value": "8488" } ]
+        },
+        {
+          "Group": "VERIFIED_INPUTS",
+          "Name": "VerifiedInput_County",
+          "Values": [ { "Value": "JACKSON" } ]
+        },
+        {
+          "Group": "VERIFIED_INPUTS",
+          "Name": "VerifiedInput_SSN",
+          "Values": [ { "Value": "***" } ]
+        },
+        {
+          "Group": "VERIFIED_INPUTS",
+          "Name": "VerifiedInput_DOB_Year",
+          "Values": [ { "Value": "1982" } ]
+        },
+        {
+          "Group": "VERIFIED_INPUTS",
+          "Name": "VerifiedInput_DOB_Month",
+          "Values": [ { "Value": "10" } ]
+        },
+        {
+          "Group": "VERIFIED_INPUTS",
+          "Name": "VerifiedInput_DOB_Day",
+          "Values": [ { "Value": "21" } ]
+        },
+        {
+          "Group": "INSTANT_ID",
+          "Name": "DobVerified",
+          "Values": [ { "Value": "1" } ]
+        },
+        {
+          "Group": "NAME_ADDRESS_SSN_SUMMARY",
+          "Name": "NameAddressSSNSummary",
+          "Values": [ { "Value": "12" } ]
+        },
+        {
+          "Group": "NAME_ADDRESS_PHONE",
+          "Name": "NAP_Summary",
+          "Values": [ { "Value": "8" } ]
+        },
+        {
+          "Group": "NAME_ADDRESS_PHONE",
+          "Name": "NAP_Type",
+          "Values": [ { "Value": "U" } ]
+        },
+        {
+          "Group": "COMPREHENSIVE_VERIFICATION_INDEX",
+          "Name": "CVI",
+          "Values": [ { "Value": "50" } ]
+        },
+        {
+          "Group": "INSTANT_ID",
+          "Name": "PassportValidated",
+          "Values": [ { "Value": "0" } ]
+        },
+        {
+          "Group": "INSTANT_ID",
+          "Name": "DOBMatchLevel",
+          "Values": [ { "Value": "8" } ]
+        },
+        {
+          "Group": "INSTANT_ID",
+          "Name": "SSNFoundForLexID",
+          "Values": [ { "Value": "true" } ]
+        },
+        {
+          "Group": "INSTANT_ID",
+          "Name": "InstantIDVersion",
+          "Values": [ { "Value": "1" } ]
+        },
+        {
+          "Group": "RISK_INDICATORS",
+          "Name": "RiskIndicators",
+          "Values": [
+            {
+              "Value": "80",
+              "Detail": "The input phone was missing or incomplete"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

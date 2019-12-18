@@ -6,12 +6,14 @@ import { AppComponent } from './app.component';
 import { ProductList } from "./shop/productList-component";
 import { DataService } from './shared/dataService';
 import { Cart } from './shop/cart.component';
-import { RouterModule } from "@angular/router";
 import { Shop } from './shop/shop.component';
 import { Checkout } from './checkout/checkout.component';
+import { Login } from './login/login.component';
+import { RouterModule } from "@angular/router";
 let routes = [
     { path: "", component: Shop },
-    { path: "checkout", component: Checkout }
+    { path: "checkout", component: Checkout },
+    { path: "login", component: Login }
 ];
 let AppModule = class AppModule {
 };
@@ -22,7 +24,8 @@ AppModule = __decorate([
             ProductList,
             Cart,
             Shop,
-            Checkout
+            Checkout,
+            Login
         ],
         imports: [
             BrowserModule,
